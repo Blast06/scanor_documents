@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "545856635336",
+    "project_id": "quick-scanner-1a04b",
+    "storage_bucket": "quick-scanner-1a04b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545856635336:android:ec5e9cb543a1ed14e0c0fd",
+        "android_client_info": {
+          "package_name": "com.awaittech.quick_scanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545856635336-akui8eqo1lli8rtaotvm5g2g6qvsd67t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBqlMDy056nglS6fmlRt-CuBY6jTm2tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545856635336-akui8eqo1lli8rtaotvm5g2g6qvsd67t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
