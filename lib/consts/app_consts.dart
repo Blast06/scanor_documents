@@ -1,5 +1,5 @@
 class AppConsts {
-  static const String appName = 'Quick Scanner';
+  static const String appName = 'Scanor';
 
   //social links
   static const String contactUs = "+12 34567890";

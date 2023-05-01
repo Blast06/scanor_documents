@@ -64,6 +64,6 @@ class DefaultFirebaseOptions {
     projectId: 'quick-scanner-1a04b',
     storageBucket: 'quick-scanner-1a04b.appspot.com',
     iosClientId: '545856635336-6a7dmjt06eg0f2j6p501kbq18p68o5d3.apps.googleusercontent.com',
-    iosBundleId: 'com.awaittech.quickScanner',
+    iosBundleId: 'escaner.documentos.pdfScanner',
   );
 }

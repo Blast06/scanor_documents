@@ -21,9 +21,14 @@ main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  await Firebase.initializeApp(
+  /*await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );*/
+  try {
+    await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+ } catch (e) {}
   await GetStorage.init();
   MobileAds.instance.updateRequestConfiguration(
     RequestConfiguration(

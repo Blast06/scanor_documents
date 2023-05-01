@@ -1,4 +1,4 @@
-package com.awaittech.quick_scanner
+package escaner.documentos.pdf
 
 import io.flutter.embedding.android.FlutterActivity
 
