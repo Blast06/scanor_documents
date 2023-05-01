@@ -109,11 +109,3 @@ class AppLifecycleReactor {
     }
   }
 }
-
-
-// TODO LIST app name
-//screenshots 
-// add admob at start and see if at the end
-// add crashlytics
-
-

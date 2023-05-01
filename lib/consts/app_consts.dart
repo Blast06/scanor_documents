@@ -1,5 +1,11 @@
+
+
+
+import 'package:get/get.dart';
+
+
 class AppConsts {
-  static const String appName = 'Scanor';
+ static  String appName = 'title'.tr;
 
   //social links
   static const String contactUs = "+12 34567890";
@@ -8,7 +14,7 @@ class AppConsts {
   static const String instagram = "https://www.instagram.com";
   static const String twitter = "https://www.twitter.com";
   static const String privacyPolice =
-      "https://www.awaittech.com/quick_scanner/privacyPolice";
+      "https://docs.google.com/document/d/10zwPJWTjGmudkz9nYf2DaXwuygeM_D0daP_GdQBsSMk/edit?usp=sharing";
   static const String termsConditions =
       "https://www.awaittech.com/quick_scanner/termsConditions";
 

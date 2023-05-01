@@ -99,60 +99,60 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     ),
                   ),
                 ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.language,
-                  ),
-                  title: Text(lang('Languages')),
-                  onTap: () {
-                    Get.to(() => const LanguageScreen());
-                  },
-                ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.phone,
-                  ),
-                  title: Text(lang('Contact Us')),
-                  onTap: () {
-                    launchURL('tel:${AppConsts.contactUs}');
-                  },
-                ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.facebook,
-                  ),
-                  title: Text(lang('Facebook')),
-                  onTap: () {
-                    launchURL(AppConsts.facebook);
-                  },
-                ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.telegram,
-                  ),
-                  title: Text(lang('Telegram')),
-                  onTap: () {
-                    launchURL(AppConsts.telegram);
-                  },
-                ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.instagram,
-                  ),
-                  title: Text(lang('Instagram')),
-                  onTap: () {
-                    launchURL(AppConsts.instagram);
-                  },
-                ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.twitter,
-                  ),
-                  title: Text(lang('Twitter')),
-                  onTap: () {
-                    launchURL(AppConsts.twitter);
-                  },
-                ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.language,
+                //   ),
+                //   title: Text(lang('Languages')),
+                //   onTap: () {
+                //     Get.to(() => const LanguageScreen());
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.phone,
+                //   ),
+                //   title: Text(lang('Contact Us')),
+                //   onTap: () {
+                //     launchURL('tel:${AppConsts.contactUs}');
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.facebook,
+                //   ),
+                //   title: Text(lang('Facebook')),
+                //   onTap: () {
+                //     launchURL(AppConsts.facebook);
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.telegram,
+                //   ),
+                //   title: Text(lang('Telegram')),
+                //   onTap: () {
+                //     launchURL(AppConsts.telegram);
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.instagram,
+                //   ),
+                //   title: Text(lang('Instagram')),
+                //   onTap: () {
+                //     launchURL(AppConsts.instagram);
+                //   },
+                // ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.twitter,
+                //   ),
+                //   title: Text(lang('Twitter')),
+                //   onTap: () {
+                //     launchURL(AppConsts.twitter);
+                //   },
+                // ),
                 ListTile(
                   leading: const FaIcon(
                     FontAwesomeIcons.userShield,
@@ -162,15 +162,15 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     launchURL(AppConsts.privacyPolice);
                   },
                 ),
-                ListTile(
-                  leading: const FaIcon(
-                    FontAwesomeIcons.newspaper,
-                  ),
-                  title: Text(lang('Terms Conditions')),
-                  onTap: () {
-                    launchURL(AppConsts.termsConditions);
-                  },
-                ),
+                // ListTile(
+                //   leading: const FaIcon(
+                //     FontAwesomeIcons.newspaper,
+                //   ),
+                //   title: Text(lang('Terms Conditions')),
+                //   onTap: () {
+                //     launchURL(AppConsts.termsConditions);
+                //   },
+                // ),
               ],
             ),
           ),

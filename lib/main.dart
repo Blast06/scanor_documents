@@ -37,12 +37,13 @@ main() async {
       ],
     ),
   );
+  //TODO: Verify the function that gets the device local language
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: LocalizationService(),
-      locale: LocalizationService().getCurrentLocale(),
-      fallbackLocale: const Locale('en', 'US'),
+      //locale: LocalizationService().getCurrentLocale(),
+      //fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.light,
@@ -66,6 +67,7 @@ main() async {
       onInit: () {
         Get.put(SettingController());
         Get.put(FileController());
+        print(Get.locale);
       },
       home: const MyApp(),
     ),
@@ -112,3 +114,9 @@ class MyAppState extends State<MyApp> {
     );
   }
 }
+
+// TODO LIST app name
+//screenshots 
+// add admob at start and see if at the end
+// add crashlytics
+//add translations with getX
