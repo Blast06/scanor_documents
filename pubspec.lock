@@ -241,6 +241,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.1.0"
+  devicelocale:
+    dependency: "direct main"
+    description:
+      name: devicelocale
+      sha256: "09cc0bce937b34dafcaac0b2a9b350d763dd16770f15e59560b7abaaaad3d65b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.0"
   draggable_scrollbar:
     dependency: "direct main"
     description:
