@@ -1,3 +1,4 @@
+import 'package:devicelocale/devicelocale.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -41,7 +42,7 @@ main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      translations: LocalizationService(),
+      //translations: LocalizationService(),
       //locale: LocalizationService().getCurrentLocale(),
       //fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(
@@ -64,10 +65,13 @@ main() async {
         WidgetBuilder? builder = routes[settings.name];
         return MaterialPageRoute(builder: (context) => builder!(context));
       },
-      onInit: () {
+      onInit: () async {
         Get.put(SettingController());
         Get.put(FileController());
-        print(Get.locale);
+        print("IDIOMA: ${Get.locale}" );
+        String? locale = await Devicelocale.currentLocale;
+        print("IDIOMA2: ${locale}" );
+
       },
       home: const MyApp(),
     ),

@@ -66,6 +66,7 @@ dependencies:
   firebase_analytics: ^10.0.2
   firebase_messaging: ^14.0.2
   circular_menu: ^2.0.1
+  devicelocale: ^0.6.0
   
 
 dev_dependencies:
