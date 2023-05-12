@@ -1,28 +1,29 @@
 // ignore_for_file: prefer_const_constructors
-
+import 'package:devicelocale/devicelocale.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:quick_scanner/services/lang/ar_ar.dart';
 import '/utils/helpers.dart';
 
 import 'lang/fr_fr.dart';
 import 'lang/en_us.dart';
+import 'lang/es_es.dart';
+
+var logger = Logger();
 
 class LocalizationService extends Translations {
   static final locale = Locale('en', 'US');
   static final fallbackLocale = Locale('en', 'US');
 
   // Supported languages
-  static final langs = [
-    'English',
-    'French',
-    'Arabic',
-  ];
+  static final langs = ['English', 'French', 'Arabic', 'Spanish'];
 
   // Supported locales
   static final locales = [
     Locale('en', 'US'),
     Locale('fr', 'FR'),
+    Locale('es', 'ES'),
     Locale('ar'),
   ];
 
@@ -32,6 +33,7 @@ class LocalizationService extends Translations {
         'en_US': enUS,
         'fr_FR': frFR,
         'ar': arAR,
+        'es-ES': esES,
       };
 
   // Gets locale from language, and updates the locale
@@ -44,11 +46,13 @@ class LocalizationService extends Translations {
   }
 
   // Finds language in `langs` list and returns it as Locale
-  Locale getLocaleFromLanguage(String lang) {
+  getLocaleFromLanguage(String lang) async {
     for (int i = 0; i < langs.length; i++) {
       if (lang == langs[i]) return locales[i];
     }
-    return Get.locale!;
+    //String? locale = await Devicelocale.currentLocale;
+    
+    return locale;
   }
 
   Locale getCurrentLocale() {

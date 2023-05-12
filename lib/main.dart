@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:logger/logger.dart';
 import '/utils/helpers.dart';
 import '/consts/consts.dart';
 import '/views/screens/parent_screen.dart';
@@ -15,6 +16,9 @@ import '/controllers/file_controller.dart';
 import '/views/screens/splash_screen.dart';
 import 'firebase_options.dart';
 import 'services/localization_service.dart';
+
+var logger = Logger();
+
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,8 +46,8 @@ main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      //translations: LocalizationService(),
-      //locale: LocalizationService().getCurrentLocale(),
+      translations: LocalizationService(),
+      locale: LocalizationService().getCurrentLocale(),
       //fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
@@ -68,9 +72,8 @@ main() async {
       onInit: () async {
         Get.put(SettingController());
         Get.put(FileController());
-        print("IDIOMA: ${Get.locale}" );
-        String? locale = await Devicelocale.currentLocale;
-        print("IDIOMA2: ${locale}" );
+        
+        
 
       },
       home: const MyApp(),
