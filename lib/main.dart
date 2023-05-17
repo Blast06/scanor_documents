@@ -47,7 +47,7 @@ main() async {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: LocalizationService(),
-      locale: LocalizationService().getCurrentLocale(),
+      locale: Get.deviceLocale,
       //fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
@@ -122,8 +122,8 @@ class MyAppState extends State<MyApp> {
   }
 }
 
-// TODO LIST app name
+// TODO LIST app name done
 //screenshots 
 // add admob at start and see if at the end
 // add crashlytics
-//add translations with getX
+//add translations with getX Done

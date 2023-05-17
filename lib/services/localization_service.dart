@@ -1,30 +1,35 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:devicelocale/devicelocale.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
+import 'package:devicelocale/devicelocale.dart';
 import 'package:quick_scanner/services/lang/ar_ar.dart';
+import 'package:quick_scanner/services/lang/fr_fr.dart';
+import 'package:quick_scanner/services/lang/en_us.dart';
+import 'package:quick_scanner/services/lang/es_es.dart';
 import '/utils/helpers.dart';
-
-import 'lang/fr_fr.dart';
-import 'lang/en_us.dart';
-import 'lang/es_es.dart';
 
 var logger = Logger();
 
 class LocalizationService extends Translations {
   static final locale = Locale('en', 'US');
   static final fallbackLocale = Locale('en', 'US');
-
+  //String? locale2 = await Devicelocale.currentLocale;
   // Supported languages
-  static final langs = ['English', 'French', 'Arabic', 'Spanish'];
+  static final langs = [
+    'English',
+    'French',
+    'Arabic',
+    'Spanish',
+  ];
 
   // Supported locales
   static final locales = [
     Locale('en', 'US'),
     Locale('fr', 'FR'),
-    Locale('es', 'ES'),
     Locale('ar'),
+    Locale('es', 'ES'),
   ];
 
   // Keys and their translations
@@ -33,7 +38,7 @@ class LocalizationService extends Translations {
         'en_US': enUS,
         'fr_FR': frFR,
         'ar': arAR,
-        'es-ES': esES,
+        'es_ES': esES,
       };
 
   // Gets locale from language, and updates the locale
@@ -46,32 +51,26 @@ class LocalizationService extends Translations {
   }
 
   // Finds language in `langs` list and returns it as Locale
-  getLocaleFromLanguage(String lang) async {
+  Locale getLocaleFromLanguage(String lang) {
     for (int i = 0; i < langs.length; i++) {
       if (lang == langs[i]) return locales[i];
     }
-    //String? locale = await Devicelocale.currentLocale;
-    
+    return Get.locale!;
+  }
+
+  Locale? getCurrentLocale() {
+  String savedLang = readStorage('lng');
+
+  if (savedLang != null) {
+    final locale = getLocaleFromLanguage(savedLang);
+
     return locale;
   }
 
-  Locale getCurrentLocale() {
-    Locale defaultLocale;
+  // If no saved language preference, use the device's locale
+  return Get.deviceLocale;
+}
 
-    if (readStorage('lng') != null) {
-      final locale =
-          LocalizationService().getLocaleFromLanguage(readStorage('lng'));
-
-      defaultLocale = locale;
-    } else {
-      defaultLocale = Locale(
-        'en',
-        'US',
-      );
-    }
-
-    return defaultLocale;
-  }
 
   String getCurrentLang() {
     return readStorage('lng') ?? "English";
