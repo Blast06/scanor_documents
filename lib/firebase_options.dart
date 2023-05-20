@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,21 +43,44 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyC2OuloGkWtPbIiGXt6nMNAUVkVdgBePDM',
+    appId: '1:654508927394:web:4deb63761585c859dceafb',
+    messagingSenderId: '654508927394',
+    projectId: 'cursofirebase-18110',
+    authDomain: 'cursofirebase-18110.firebaseapp.com',
+    databaseURL: 'https://cursofirebase-18110.firebaseio.com',
+    storageBucket: 'cursofirebase-18110.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDjBqlMDy056nglS6fmlRt-CuBY6jTm2tw',
-    appId: '1:545856635336:android:ec5e9cb543a1ed14e0c0fd',
-    messagingSenderId: '545856635336',
-    projectId: 'quick-scanner-1a04b',
-    storageBucket: 'quick-scanner-1a04b.appspot.com',
+    apiKey: 'AIzaSyCHOVccte3fBJv-KQyq8j5BcBpEwQ7GS1s',
+    appId: '1:654508927394:android:3a5483095c8901e1dceafb',
+    messagingSenderId: '654508927394',
+    projectId: 'cursofirebase-18110',
+    databaseURL: 'https://cursofirebase-18110.firebaseio.com',
+    storageBucket: 'cursofirebase-18110.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC8w1nL1eCo30TEIZKR3f7WoZ27-WftY9U',
-    appId: '1:545856635336:ios:ccb0f39a83c4f411e0c0fd',
-    messagingSenderId: '545856635336',
-    projectId: 'quick-scanner-1a04b',
-    storageBucket: 'quick-scanner-1a04b.appspot.com',
-    iosClientId: '545856635336-6a7dmjt06eg0f2j6p501kbq18p68o5d3.apps.googleusercontent.com',
+    apiKey: 'AIzaSyA3ecB47KUTTtdzLZA_KIseAZMh1Uoo0uk',
+    appId: '1:654508927394:ios:489f9c96d53ac090dceafb',
+    messagingSenderId: '654508927394',
+    projectId: 'cursofirebase-18110',
+    databaseURL: 'https://cursofirebase-18110.firebaseio.com',
+    storageBucket: 'cursofirebase-18110.appspot.com',
+    iosClientId: '654508927394-g2h2cfqs8d0kja43dqrj0jumb0hc4k3g.apps.googleusercontent.com',
+    iosBundleId: 'escaner.documentos.pdfScanner',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyA3ecB47KUTTtdzLZA_KIseAZMh1Uoo0uk',
+    appId: '1:654508927394:ios:489f9c96d53ac090dceafb',
+    messagingSenderId: '654508927394',
+    projectId: 'cursofirebase-18110',
+    databaseURL: 'https://cursofirebase-18110.firebaseio.com',
+    storageBucket: 'cursofirebase-18110.appspot.com',
+    iosClientId: '654508927394-g2h2cfqs8d0kja43dqrj0jumb0hc4k3g.apps.googleusercontent.com',
     iosBundleId: 'escaner.documentos.pdfScanner',
   );
 }

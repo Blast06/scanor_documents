@@ -125,5 +125,4 @@ class MyAppState extends State<MyApp> {
 // TODO LIST app name done
 //screenshots 
 // add admob at start and see if at the end
-// add crashlytics
-//add translations with getX Done
+// add crashlytics on ios
