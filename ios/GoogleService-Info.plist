@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>654508927394-7092kskes7bh5s2pokb2aickqavfl3pn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.654508927394-7092kskes7bh5s2pokb2aickqavfl3pn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA3ecB47KUTTtdzLZA_KIseAZMh1Uoo0uk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>654508927394</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>escaner.documentos.pdf</string>
+	<key>PROJECT_ID</key>
+	<string>cursofirebase-18110</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cursofirebase-18110.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:654508927394:ios:e2624a4f8d2bdd88dceafb</string>
+	<key>DATABASE_URL</key>
+	<string>https://cursofirebase-18110.firebaseio.com</string>
+</dict>
+</plist>
