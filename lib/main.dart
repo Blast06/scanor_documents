@@ -122,7 +122,7 @@ class MyAppState extends State<MyApp> {
   }
 }
 
-// TODO LIST app name done
+// TODO 
 //screenshots 
 // add admob at start and see if at the end
-// add crashlytics on ios
+

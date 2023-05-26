@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 
 class AppConsts {
- static  String appName = 'title'.tr;
+ static  String appName = 'Scanor';
 
   //social links
   static const String contactUs = "+12 34567890";
