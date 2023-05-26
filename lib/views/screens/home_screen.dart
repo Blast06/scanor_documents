@@ -94,27 +94,30 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.fileContract,
                                     title: "OCR",
                                     callback: () {
-                                      AdsService.showInterstitialAd(() {
                                         Get.to(() => const OcrScreen());
-                                      });
+                                      // AdsService.showInterstitialAd(() {
+                                      
+                                      // });
                                     },
                                   ),
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.idCard,
                                     title: 'ID Card',
                                     callback: () {
-                                      AdsService.showInterstitialAd(() {
-                                        Get.to(() => const IdCardScreen());
-                                      });
+                                      Get.to(() => const IdCardScreen());
+                                      // AdsService.showInterstitialAd(() {
+                                        
+                                      // });
                                     },
                                   ),
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.filePdf,
                                     title: "PDF Merge",
                                     callback: () {
-                                      AdsService.showInterstitialAd(() {
+                                      //AdsService.showInterstitialAd(() 
+                                      //{
                                         Get.to(() => const PdfMergeScreen());
-                                      });
+                                      //});
                                     },
                                   ),
                                 ],
@@ -132,18 +135,20 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.file,
                                     title: "Document",
                                     callback: () {
-                                      AdsService.showInterstitialAd(() {
-                                        Get.to(() => const DocumentScreen());
-                                      });
+                                      Get.to(() => const DocumentScreen());
+                                      //AdsService.showInterstitialAd(() {
+                                        
+                                      //});
                                     },
                                   ),
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.marker,
                                     title: "QR Generate",
                                     callback: () {
-                                      AdsService.showInterstitialAd(() {
                                         Get.to(() => const QrGenerateScreen());
-                                      });
+                                      //AdsService.showInterstitialAd(() {
+                                      
+                                      //});
                                     },
                                   ),
                                   FeatureWidget(
