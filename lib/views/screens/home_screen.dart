@@ -155,9 +155,10 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.qrcode,
                                     title: "QR Scan",
                                     callback: () {
-                                      AdsService.showInterstitialAd(() {
-                                        Get.to(() => const QrScannerScreen());
-                                      });
+                                       Get.to(() => const QrScannerScreen());
+                                      // AdsService.showInterstitialAd(() {
+                                       
+                                      // });
                                     },
                                   ),
                                 ],
