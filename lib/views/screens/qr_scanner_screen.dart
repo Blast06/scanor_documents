@@ -68,11 +68,9 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
             scanLineColor: AppColors.primaryColor,
             onCapture: (finalText) {
               controller.pause();
-              AdsService.showInterstitialAd(() {
-                Get.to(() => QrTextScreen(finalText))?.then((value) {
+              Get.to(() => QrTextScreen(finalText))?.then((value) {
                   controller.resume();
                 });
-              });
             },
           ),
           Positioned(
@@ -95,12 +93,10 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
                         String? finalText = await Scan.parse(pickedFile.path);
                         if (finalText != null) {
                           controller.pause();
-                          AdsService.showInterstitialAd(() {
-                            Get.to(() => QrTextScreen(finalText))
+                          Get.to(() => QrTextScreen(finalText))
                                 ?.then((value) {
                               controller.resume();
                             });
-                          });
                         } else {
                           showToast('No Qr Found', ToastGravity.CENTER);
                         }
@@ -218,13 +214,11 @@ class _QrTextScreenState extends State<QrTextScreen> {
         actions: [
           InkWell(
             onTap: () async {
-              AdsService.showInterstitialAd(() async {
-                File? file = await createTxtFile(widget.text);
+               File? file = await createTxtFile(widget.text);
                 if (file == null) {
                   return;
                 }
                 fileNameDialog('TXT', file.path, 'qr_scan');
-              });
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -273,7 +267,7 @@ class _QrTextScreenState extends State<QrTextScreen> {
                 ),
               ),
             ),
-            BannerAds(),
+            //BannerAds(),
             if (!visible)
               Container(
                 height: 80,

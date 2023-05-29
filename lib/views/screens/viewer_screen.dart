@@ -149,7 +149,7 @@ class _PdfViewerScreenState extends State<PdfViewerScreen> {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          BannerAds(),
+          //BannerAds(),
           Container(
             height: 80,
             width: double.infinity,
@@ -347,7 +347,7 @@ class _ImageViewerScreenState extends State<ImageViewerScreen> {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          BannerAds(),
+          //BannerAds(),
           Container(
             height: 80,
             width: double.infinity,
@@ -455,7 +455,7 @@ class _TextViewerScreenState extends State<TextViewerScreen> {
                 ),
               ),
             ),
-            BannerAds(),
+            //BannerAds(),
             if (!visible)
               Container(
                 height: 80,

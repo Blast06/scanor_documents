@@ -103,7 +103,7 @@ class ParentScreenState extends State<ParentScreen> {
         bottomNavigationBar: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            BannerAds(),
+            //BannerAds(),
             BottomNavigationBar(
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(

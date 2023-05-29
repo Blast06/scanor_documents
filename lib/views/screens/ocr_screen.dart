@@ -1,5 +1,5 @@
 import 'dart:io';
-import '/services/ads_service.dart';
+//import '/services/ads_service.dart';
 import '/views/dialogs/file_name.dart';
 import '/consts/consts.dart';
 import '/controllers/setting_controller.dart';
@@ -253,9 +253,8 @@ class _OcrScreenState extends State<OcrScreen> {
       isLoading = false;
     });
     textRecognizer.close();
-    AdsService.showInterstitialAd(() {
-      Get.to(() => OcrTextScreen(finalText));
-    });
+    Get.to(() => OcrTextScreen(finalText));
+    
   }
 }
 
@@ -280,13 +279,11 @@ class _OcrTextScreenState extends State<OcrTextScreen> {
         actions: [
           InkWell(
             onTap: () async {
-              AdsService.showInterstitialAd(() async {
-                File? file = await createTxtFile(widget.text);
-                if (file == null) {
-                  return;
-                }
-                fileNameDialog('TXT', file.path, 'ocr');
-              });
+              File? file = await createTxtFile(widget.text);
+              if (file == null) {
+                return;
+              }
+              fileNameDialog('TXT', file.path, 'ocr');
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -335,7 +332,7 @@ class _OcrTextScreenState extends State<OcrTextScreen> {
                 ),
               ),
             ),
-            BannerAds(),
+            //BannerAds(),
             if (!visible)
               Container(
                 height: 80,

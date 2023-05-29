@@ -42,7 +42,6 @@ main() async {
       ],
     ),
   );
-  //TODO: Verify the function that gets the device local language
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,

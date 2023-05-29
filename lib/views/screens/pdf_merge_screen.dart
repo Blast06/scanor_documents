@@ -11,7 +11,7 @@ import 'package:pdfx/pdfx.dart';
 import '/views/dialogs/file_name.dart';
 import 'package:share_plus/share_plus.dart';
 import '/consts/consts.dart';
-import '/services/ads_service.dart';
+//import '/services/ads_service.dart';
 import '/utils/helpers.dart';
 
 class PdfMergeScreen extends StatefulWidget {
@@ -66,7 +66,7 @@ class _PdfMergeScreenState extends State<PdfMergeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: BannerAds(),
+      //bottomNavigationBar: BannerAds(),
     );
   }
 
@@ -88,9 +88,8 @@ class _PdfMergeScreenState extends State<PdfMergeScreen> {
         isLoading = false;
       });
       if (response.status == "success") {
-        AdsService.showInterstitialAd(() {
-          Get.to(() => PdfViewerScreen(pdfFile.path));
-        });
+        Get.to(() => PdfViewerScreen(pdfFile.path));
+
       }
     } on PlatformException {
       dd('Failed to get platform version.');
@@ -165,9 +164,8 @@ class _PdfViewerScreenState extends State<PdfViewerScreen> {
           ),
           InkWell(
             onTap: () async {
-              AdsService.showInterstitialAd(() async {
-                fileNameDialog('PDF', widget.path, 'pdf');
-              });
+              fileNameDialog('PDF', widget.path, 'pdf');
+              
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(
@@ -218,7 +216,7 @@ class _PdfViewerScreenState extends State<PdfViewerScreen> {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          BannerAds(),
+          //BannerAds(),
           Container(
             height: 80,
             width: double.infinity,

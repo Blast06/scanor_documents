@@ -42,9 +42,7 @@ class _RecentListScreenState extends State<RecentListScreen> {
                     children: [
                       InkWell(
                         onTap: () {
-                          AdsService.showInterstitialAd(() {
-                            Get.to(() => ViewerScreen(file));
-                          });
+                           Get.to(() => ViewerScreen(file));
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(

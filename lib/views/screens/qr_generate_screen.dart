@@ -1,5 +1,5 @@
 import 'dart:io';
-import '/services/ads_service.dart';
+//import '/services/ads_service.dart';
 import 'package:pdf_compressor/pdf_compressor.dart';
 import '/consts/consts.dart';
 import '/utils/helpers.dart';
@@ -69,10 +69,9 @@ class _QrGenerateScreenState extends State<QrGenerateScreen> {
                 if (text == '') {
                   showToast('TextField is required.', ToastGravity.CENTER);
                   return;
-                }
-                AdsService.showInterstitialAd(() {
-                  Get.to(() => QrViewScreen(text));
-                });
+                } 
+                 Get.to(() => QrViewScreen(text));
+                
               },
               child: Container(
                 margin: const EdgeInsets.only(top: 10, bottom: 20),
@@ -123,11 +122,9 @@ class _QrViewScreenState extends State<QrViewScreen> {
           if (!isShowFormat)
             InkWell(
               onTap: () {
-                AdsService.showInterstitialAd(() {
-                  setState(() {
+                setState(() {
                     isShowFormat = true;
                   });
-                });
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -274,7 +271,7 @@ class _QrViewScreenState extends State<QrViewScreen> {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          BannerAds(),
+          //BannerAds(),
           Container(
             height: 80,
             width: double.infinity,

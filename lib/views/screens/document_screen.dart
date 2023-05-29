@@ -5,7 +5,7 @@ import 'dart:math';
 
 import 'package:circular_menu/circular_menu.dart';
 import 'package:draggable_scrollbar/draggable_scrollbar.dart';
-import '/services/ads_service.dart';
+//import '/services/ads_service.dart';
 import '/consts/consts.dart';
 import '/utils/helpers.dart';
 import '/views/dialogs/file_name.dart';
@@ -180,9 +180,9 @@ class _DocumentScreenState extends State<DocumentScreen> {
               child: Center(
                 child: InkWell(
                   onTap: () {
-                    AdsService.showInterstitialAd(() {
-                      Get.to(() => DocmentViewScreen(images));
-                    });
+
+                    Get.to(() => DocmentViewScreen(images));
+                    
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(
@@ -236,10 +236,8 @@ class _DocmentViewScreenState extends State<DocmentViewScreen> {
         actions: [
           InkWell(
             onTap: () async {
-              AdsService.showInterstitialAd(() async {
-                File file = await createFile();
-                fileNameDialog('PDF', file.path, 'document');
-              });
+              File file = await createFile();
+              fileNameDialog('PDF', file.path, 'document');
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(
