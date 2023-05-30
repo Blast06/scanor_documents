@@ -106,7 +106,7 @@ class AppLifecycleReactor {
   //check this method to see if it is triggered when a state change from
   void _onAppStateChanged(AppState appState) {
     if (appState == AppState.foreground) {
-      appOpenAdManager.showAdIfAvailable();
+      //appOpenAdManager.showAdIfAvailable();
     }
   }
 }

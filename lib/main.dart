@@ -123,5 +123,7 @@ class MyAppState extends State<MyApp> {
 
 // TODO 
 //screenshots 
-// add admob at start and see if at the end
+// add admob at start and see if at the end when closing the app
+//add screenshots 
+//change the app logo
 
