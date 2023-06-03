@@ -37,5 +37,5 @@ class AppConsts {
   static const String iosBannerAdCode =
       "ca-app-pub-3940256099942544/2934735716";
   static const String iosInterstitialAdCode =
-      "	ca-app-pub-3940256099942544/4411468910";
+      "ca-app-pub-3940256099942544/1033173712";
 }

@@ -114,10 +114,10 @@ class ParentScreenState extends State<ParentScreen> {
                   icon: FaIcon(FontAwesomeIcons.file),
                   label: '',
                 ),
-                BottomNavigationBarItem(
-                  icon: FaIcon(FontAwesomeIcons.share),
-                  label: '',
-                ),
+                // BottomNavigationBarItem(
+                //   icon: FaIcon(FontAwesomeIcons.share),
+                //   label: '',
+                // ),
               ],
               currentIndex: _selectedIndex,
               selectedItemColor: AppColors.primaryColor,
