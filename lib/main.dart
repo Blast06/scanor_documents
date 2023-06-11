@@ -15,13 +15,14 @@ import '/controllers/setting_controller.dart';
 import '/controllers/file_controller.dart';
 import '/views/screens/splash_screen.dart';
 import 'firebase_options.dart';
+import 'services/app_open_service.dart';
 import 'services/localization_service.dart';
 
 var logger = Logger();
 
-
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -31,9 +32,9 @@ main() async {
   );*/
   try {
     await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
- } catch (e) {}
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {}
   await GetStorage.init();
   MobileAds.instance.updateRequestConfiguration(
     RequestConfiguration(
@@ -42,6 +43,9 @@ main() async {
       ],
     ),
   );
+
+  Get.lazyPut(() => AppOpenService());
+
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
@@ -71,9 +75,6 @@ main() async {
       onInit: () async {
         Get.put(SettingController());
         Get.put(FileController());
-        
-        
-
       },
       home: const MyApp(),
     ),
@@ -89,6 +90,7 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   SettingController settingController = Get.find();
+  final AppOpenService appOpenService = Get.find();
   var hasNotification = false;
   late Map arguments;
 
@@ -96,7 +98,10 @@ class MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initNotification();
-    Future.delayed(2.seconds, () {
+    Future.delayed(1.seconds, () {
+      //show app open ad
+      
+      appOpenService.showAdIfAvailable();
       Get.offAll(() => const ParentScreen());
     });
   }

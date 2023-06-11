@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:logger/logger.dart';
+
 import '/consts/consts.dart';
 
 import '/controllers/setting_controller.dart';
@@ -7,13 +9,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-class AppOpenService {
+class AppOpenService extends GetxController {
   SettingController settingController = Get.find();
-
+  Logger logger = Logger();
   AppOpenAd? _appOpenAd;
   bool _isShowingAd = false;
   final Duration maxCacheDuration = const Duration(hours: 4);
   DateTime? _appOpenLoadTime;
+
+  @override
+  void onInit() async {
+    super.onInit();
+    
+    loadAd();
+  }
 
   void loadAd([showAd = false]) {
     if (settingController.adsType.value != 'google' || !AppConsts.adsStatus) {
@@ -103,7 +112,7 @@ class AppLifecycleReactor {
         .forEach((state) => _onAppStateChanged(state));
   }
 
-  //check this method to see if it is triggered when a state change 
+  //check this method to see if it is triggered when a state change
   void _onAppStateChanged(AppState appState) {
     if (appState == AppState.foreground) {
       //appOpenAdManager.showAdIfAvailable();
