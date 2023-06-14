@@ -12,7 +12,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 class AppOpenService extends GetxController {
   SettingController settingController = Get.find();
   Logger logger = Logger();
-  AppOpenAd? _appOpenAd;
+  AppOpenAd? appOpenAd;
   bool _isShowingAd = false;
   final Duration maxCacheDuration = const Duration(hours: 4);
   DateTime? _appOpenLoadTime;
@@ -20,11 +20,11 @@ class AppOpenService extends GetxController {
   @override
   void onInit() async {
     super.onInit();
-    
-    loadAd();
+    logger.i("app open loading");
+    await loadAd();
   }
 
-  void loadAd([showAd = false]) {
+   Future<void> loadAd([showAd = false]) async{
     if (settingController.adsType.value != 'google' || !AppConsts.adsStatus) {
       return;
     }
@@ -37,8 +37,8 @@ class AppOpenService extends GetxController {
       adLoadCallback: AppOpenAdLoadCallback(
         onAdLoaded: (ad) {
           _appOpenLoadTime = DateTime.now();
-          _appOpenAd = ad;
-          debugPrint('AppOpenAd ');
+          appOpenAd = ad;
+          debugPrint('AppOpenAd loaded');
           if (showAd) {
             showAdIfAvailable();
           }
@@ -53,7 +53,7 @@ class AppOpenService extends GetxController {
 
   /// Whether an ad is available to be shown.
   bool get isAdAvailable {
-    return _appOpenAd != null;
+    return appOpenAd != null;
   }
 
   void showAdIfAvailable() {
@@ -71,13 +71,13 @@ class AppOpenService extends GetxController {
     }
     if (DateTime.now().subtract(maxCacheDuration).isAfter(_appOpenLoadTime!)) {
       debugPrint('Maximum cache duration exceeded. Loading another ad.');
-      _appOpenAd!.dispose();
-      _appOpenAd = null;
+      appOpenAd!.dispose();
+      appOpenAd = null;
       loadAd();
       return;
     }
     // Set the fullScreenContentCallback and show the ad.
-    _appOpenAd!.fullScreenContentCallback = FullScreenContentCallback(
+    appOpenAd!.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (ad) {
         _isShowingAd = true;
         debugPrint('$ad onAdShowedFullScreenContent');
@@ -86,18 +86,18 @@ class AppOpenService extends GetxController {
         debugPrint('$ad onAdFailedToShowFullScreenContent: $error');
         _isShowingAd = false;
         ad.dispose();
-        _appOpenAd = null;
+        appOpenAd = null;
       },
       onAdDismissedFullScreenContent: (ad) {
         debugPrint('$ad onAdDismissedFullScreenContent');
         _isShowingAd = false;
         ad.dispose();
-        _appOpenAd = null;
+        appOpenAd = null;
         loadAd();
       },
     );
 
-    _appOpenAd!.show();
+    appOpenAd!.show();
   }
 }
 

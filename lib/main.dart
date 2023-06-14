@@ -22,7 +22,7 @@ var logger = Logger();
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
+  Get.lazyPut(() => AppOpenService());
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -43,8 +43,6 @@ main() async {
       ],
     ),
   );
-
-  Get.lazyPut(() => AppOpenService());
 
   runApp(
     GetMaterialApp(
@@ -75,6 +73,7 @@ main() async {
       onInit: () async {
         Get.put(SettingController());
         Get.put(FileController());
+       
       },
       home: const MyApp(),
     ),
@@ -98,12 +97,7 @@ class MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initNotification();
-    Future.delayed(1.seconds, () {
-      //show app open ad
-      
-      appOpenService.showAdIfAvailable();
-      Get.offAll(() => const ParentScreen());
-    });
+    
   }
 
   initNotification() async {
@@ -128,7 +122,6 @@ class MyAppState extends State<MyApp> {
 
 // TODO 
 //screenshots 
-// add admob at start and see if at the end when closing the app
 //add screenshots 
 //change the app logo
 
