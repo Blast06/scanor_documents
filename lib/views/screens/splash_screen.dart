@@ -75,7 +75,7 @@ class SplashScreenState extends State<SplashScreen> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Image.asset(
-                    'assets/images/splash.png',
+                    'assets/images/splash.jpeg',
                   ),
                 ),
               ),

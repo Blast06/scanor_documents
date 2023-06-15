@@ -79,6 +79,7 @@ dependencies:
   firebase_dynamic_links: ^5.1.0
   firebase_messaging: ^14.4.0
   firebase_storage: ^11.1.0
+  is_first_run: ^1.0.0
   
 
 dev_dependencies:
@@ -92,7 +93,6 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_launcher_icons: ^0.11.0
-  is_first_run: ^1.0.0
 
 flutter_icons:
   android: "ic_launcher"

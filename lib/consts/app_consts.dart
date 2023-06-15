@@ -1,11 +1,7 @@
-
-
-
 import 'package:get/get.dart';
 
-
 class AppConsts {
- static  String appName = 'Scanor';
+  static String appName = 'Scanor';
 
   //social links
   static const String contactUs = "+12 34567890";
@@ -31,6 +27,7 @@ class AppConsts {
       "ca-app-pub-3940256099942544/1033173712";
 
   //ios
+  static const String appId = "ca-app-pub-4473546092325949~9248805997";
   static const int iosAdClickControl = 2;
   static const String iosAppopenAdCode =
       "ca-app-pub-3940256099942544/5662855259";

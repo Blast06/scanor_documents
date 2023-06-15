@@ -769,7 +769,7 @@ packages:
     source: hosted
     version: "0.18.1"
   is_first_run:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: is_first_run
       sha256: "344d9783cbce7b9b90c45b398f85afa1c4a13bb26dcc726d1ee2ec873c8b9b8b"

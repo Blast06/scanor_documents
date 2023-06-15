@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 import 'package:quick_scanner/services/app_open_service.dart';
-
+import 'package:is_first_run/is_first_run.dart';
 import '../views/screens/parent_screen.dart';
 
 
@@ -16,13 +16,17 @@ class SplashController extends GetxController {
   @override
   void onReady() async {
     log.i("onReady of splash controller");
+    bool firstRun = await IsFirstRun.isFirstRun();
 
     super.onReady();
     // await admob.loadAd();
 
  
     await Future.delayed(const Duration(seconds: 5), () {
-       admob.appOpenAd!.show();
+      
+       if (!firstRun) {
+        admob.appOpenAd!.show();
+      }
       // Get.offAndToNamed(Routes.FORM_SCREEN);
        Get.offAll(() => const ParentScreen());
     });
