@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="escaner.documentos.pdf">
    <application
-        android:label="Quick Scanner"
+        android:label="scanor"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
