@@ -1,5 +1,6 @@
-import 'package:quick_scanner/utils/helpers.dart';
 
+
+import '../../utils/helpers.dart';
 import '/consts/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

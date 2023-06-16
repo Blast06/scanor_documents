@@ -1,5 +1,6 @@
-import 'package:quick_scanner/utils/helpers.dart';
 
+
+import '../../utils/helpers.dart';
 import '/views/widgets/drawer_widget.dart';
 
 import '/services/ads_service.dart';

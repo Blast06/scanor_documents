@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quick_scanner/utils/helpers.dart';
+import '../../utils/helpers.dart';
 import '/consts/consts.dart';
 
 notificationDialog() {

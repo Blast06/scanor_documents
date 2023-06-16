@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:quick_scanner/services/app_open_service.dart';
+
 import 'package:is_first_run/is_first_run.dart';
+import '../services/app_open_service.dart';
 import '../views/screens/parent_screen.dart';
 
 

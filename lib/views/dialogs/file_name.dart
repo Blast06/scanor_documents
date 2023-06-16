@@ -1,5 +1,4 @@
-import 'package:quick_scanner/utils/helpers.dart';
-
+import '../../utils/helpers.dart';
 import '/consts/consts.dart';
 import '/controllers/file_controller.dart';
 import 'package:flutter/material.dart';

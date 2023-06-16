@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:devicelocale/devicelocale.dart';
-import 'package:quick_scanner/services/lang/ar_ar.dart';
-import 'package:quick_scanner/services/lang/fr_fr.dart';
-import 'package:quick_scanner/services/lang/en_us.dart';
-import 'package:quick_scanner/services/lang/es_es.dart';
+
 import '/utils/helpers.dart';
+import 'lang/ar_ar.dart';
+import 'lang/en_us.dart';
+import 'lang/es_es.dart';
+import 'lang/fr_fr.dart';
 
 var logger = Logger();
 
