@@ -199,8 +199,8 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs to access library to save content generated from the app itself</string>
+	<string>This app needs to access photo library</string>
 	<key>NSCameraUsageDescription</key>
-	<string>This app needs to access camera to scan qr codes and generate pdf or documents</string>
+	<string>This app needs Camera Usage</string>
 </dict>
 </plist>
