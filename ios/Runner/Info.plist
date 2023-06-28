@@ -199,8 +199,8 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs to access photo library</string>
+	<string>Allow access to photos to upload photos from your library </string>
 	<key>NSCameraUsageDescription</key>
-	<string>This app needs Camera Usage</string>
+	<string>Allow access to your camera to take pictures to scan qr or documents</string>
 </dict>
 </plist>
