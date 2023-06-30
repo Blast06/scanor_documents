@@ -96,7 +96,7 @@ class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    initNotification();
+    //initNotification();
     
   }
 
