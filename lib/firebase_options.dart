@@ -64,13 +64,13 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyA3ecB47KUTTtdzLZA_KIseAZMh1Uoo0uk',
-    appId: '1:654508927394:ios:489f9c96d53ac090dceafb',
+    appId: '1:654508927394:ios:e2624a4f8d2bdd88dceafb',
     messagingSenderId: '654508927394',
     projectId: 'cursofirebase-18110',
     databaseURL: 'https://cursofirebase-18110.firebaseio.com',
     storageBucket: 'cursofirebase-18110.appspot.com',
-    iosClientId: '654508927394-g2h2cfqs8d0kja43dqrj0jumb0hc4k3g.apps.googleusercontent.com',
-    iosBundleId: 'escaner.documentos.pdfScanner',
+    iosClientId: '654508927394-7092kskes7bh5s2pokb2aickqavfl3pn.apps.googleusercontent.com',
+    iosBundleId: 'escaner.documentos.pdf',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(

@@ -202,5 +202,9 @@
 	<string>Allow access to photos to upload photos from your library </string>
 	<key>NSCameraUsageDescription</key>
 	<string>Allow access to your camera to take pictures to scan qr or documents</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 </dict>
 </plist>
