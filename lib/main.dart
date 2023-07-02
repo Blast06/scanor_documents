@@ -101,18 +101,6 @@ class MyAppState extends State<MyApp> {
     
   }
 
-  initNotification() async {
-    dd('initNotification');
-
-    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      dd(message.notification?.title);
-    });
-
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      dd(message.notification?.title);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

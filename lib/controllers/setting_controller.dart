@@ -39,28 +39,10 @@ class SettingController extends GetxController {
     final info = await PackageInfo.fromPlatform();
     version.value = info.version;
 
-    var status = readStorage('notification') ?? true;
-    notification.value = status;
-
-    if (notification.value) {
-      FirebaseMessaging.instance.subscribeToTopic('high_importance_channel');
-    } else {
-      FirebaseMessaging.instance
-          .unsubscribeFromTopic('high_importance_channel');
-    }
+   
 
     currentLanguage.value = readStorage('lng') ?? 'English';
   }
 
-  changeNotificationStatus() async {
-    writeStorage('notification', !notification.value);
-    notification.value = !notification.value;
-
-    if (notification.value) {
-      FirebaseMessaging.instance.subscribeToTopic('high_importance_channel');
-    } else {
-      FirebaseMessaging.instance
-          .unsubscribeFromTopic('high_importance_channel');
-    }
-  }
+  
 }

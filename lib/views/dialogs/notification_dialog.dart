@@ -33,7 +33,7 @@ notificationDialog() {
                   groupValue: settingController.notification.value,
                   onChanged: (bool? v) {
                     Navigator.pop(context);
-                    settingController.changeNotificationStatus();
+                    //settingController.changeNotificationStatus();
                   },
                 );
               }),
@@ -53,7 +53,7 @@ notificationDialog() {
                   groupValue: settingController.notification.value,
                   onChanged: (bool? v) {
                     Navigator.pop(context);
-                    settingController.changeNotificationStatus();
+                    //settingController.changeNotificationStatus();
                   },
                 );
               }),
