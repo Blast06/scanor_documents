@@ -199,9 +199,9 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow access to photos to upload photos from your library </string>
+	<string>The App needs access to photos to upload pictures from your library and create PDFs or Carnets</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Allow access to your camera to take pictures to scan qr or documents</string>
+	<string>The App needs access to your camera to take pictures to scan qr and create documents</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
