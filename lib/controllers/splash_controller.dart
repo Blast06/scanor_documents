@@ -24,13 +24,20 @@ class SplashController extends GetxController {
 
  
     await Future.delayed(const Duration(seconds: 5), () {
-      
-       if (!firstRun) {
-        admob.appOpenAd!.show();
-      }
+  if (admob.appOpenAd != null) {
+    if (!firstRun) {
+      admob.appOpenAd!.show();
+    } else {
       // Get.offAndToNamed(Routes.FORM_SCREEN);
-       Get.offAll(() => const ParentScreen());
-    });
+      Get.offAll(() => const ParentScreen());
+    }
+  } else {
+    // Handle the case when admob.appOpenAd is null
+    // Get.offAndToNamed(Routes.FORM_SCREEN);
+    Get.offAll(() => const ParentScreen());
+  }
+});
+
   }
 
   void onInit() async {
