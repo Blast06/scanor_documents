@@ -134,12 +134,7 @@ class HomeScreen extends StatelessWidget {
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.file,
                                     title: "Document",
-                                    callback: () {
-                                      Get.to(() => const DocumentScreen());
-                                      //AdsService.showInterstitialAd(() {
-                                        
-                                      //});
-                                    },
+                                    callback: () => const DocumentScreen(),
                                   ),
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.marker,
@@ -169,6 +164,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  
                 ],
               ),
             ),
