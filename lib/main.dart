@@ -40,6 +40,7 @@ main() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
   
   await GetStorage.init();
+  
   MobileAds.instance.updateRequestConfiguration(
     RequestConfiguration(
       testDeviceIds: [

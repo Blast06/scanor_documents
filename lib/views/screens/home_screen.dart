@@ -134,7 +134,12 @@ class HomeScreen extends StatelessWidget {
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.file,
                                     title: "Document",
-                                    callback: () => const DocumentScreen(),
+                                    callback:() {
+                                        Get.to(() => const DocumentScreen());
+                                      //AdsService.showInterstitialAd(() {
+                                      
+                                      //});
+                                    },
                                   ),
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.marker,
