@@ -80,7 +80,8 @@ dependencies:
   firebase_messaging: ^14.4.0
   firebase_storage: ^11.1.0
   is_first_run: ^1.0.0
-  
+  image_gallery_saver: ^2.0.3
+  app_tracking_transparency: ^2.0.4
 
 dev_dependencies:
   flutter_test:

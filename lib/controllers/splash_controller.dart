@@ -6,7 +6,7 @@ import 'package:logger/logger.dart';
 import 'package:is_first_run/is_first_run.dart';
 import '../services/app_open_service.dart';
 import '../views/screens/parent_screen.dart';
-
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 
 class SplashController extends GetxController {
   final admob = Get.find<AppOpenService>();
@@ -21,23 +21,25 @@ class SplashController extends GetxController {
 
     super.onReady();
     // await admob.loadAd();
-
- 
-    await Future.delayed(const Duration(seconds: 5), () {
-  if (admob.appOpenAd != null) {
-    if (!firstRun) {
-      admob.appOpenAd!.show();
-    } else {
-      // Get.offAndToNamed(Routes.FORM_SCREEN);
-      Get.offAll(() => const ParentScreen());
+    if (firstRun) {
+      await AppTrackingTransparency.requestTrackingAuthorization();
+      log.v("paso por aqui");
     }
-  } else {
-    // Handle the case when admob.appOpenAd is null
-    // Get.offAndToNamed(Routes.FORM_SCREEN);
-    Get.offAll(() => const ParentScreen());
-  }
-});
 
+    await Future.delayed(const Duration(seconds: 5), () {
+      if (admob.appOpenAd != null) {
+        if (!firstRun) {
+          admob.appOpenAd!.show();
+        } else {
+          // Get.offAndToNamed(Routes.FORM_SCREEN);
+          Get.offAll(() => const ParentScreen());
+        }
+      } else {
+        // Handle the case when admob.appOpenAd is null
+        // Get.offAndToNamed(Routes.FORM_SCREEN);
+        Get.offAll(() => const ParentScreen());
+      }
+    });
   }
 
   void onInit() async {
