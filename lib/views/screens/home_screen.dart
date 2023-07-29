@@ -1,4 +1,6 @@
+import 'package:scanor/controllers/home_screen_controller.dart';
 
+import '../../services/External_services.dart';
 import '../../utils/helpers.dart';
 import '/services/ads_service.dart';
 import '/consts/consts.dart';
@@ -20,6 +22,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ExternalServices.getInstance().showRateApp();
+
     return Stack(
       children: [
         SingleChildScrollView(
@@ -94,9 +98,9 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.fileContract,
                                     title: "OCR",
                                     callback: () {
-                                        Get.to(() => const OcrScreen());
+                                      Get.to(() => const OcrScreen());
                                       // AdsService.showInterstitialAd(() {
-                                      
+
                                       // });
                                     },
                                   ),
@@ -106,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                                     callback: () {
                                       Get.to(() => const IdCardScreen());
                                       // AdsService.showInterstitialAd(() {
-                                        
+
                                       // });
                                     },
                                   ),
@@ -114,9 +118,9 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.filePdf,
                                     title: "PDF Merge",
                                     callback: () {
-                                      //AdsService.showInterstitialAd(() 
+                                      //AdsService.showInterstitialAd(()
                                       //{
-                                        Get.to(() => const PdfMergeScreen());
+                                      Get.to(() => const PdfMergeScreen());
                                       //});
                                     },
                                   ),
@@ -134,10 +138,10 @@ class HomeScreen extends StatelessWidget {
                                   FeatureWidget(
                                     icon: FontAwesomeIcons.file,
                                     title: "Document",
-                                    callback:() {
-                                        Get.to(() => const DocumentScreen());
+                                    callback: () {
+                                      Get.to(() => const DocumentScreen());
                                       //AdsService.showInterstitialAd(() {
-                                      
+
                                       //});
                                     },
                                   ),
@@ -145,9 +149,9 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.marker,
                                     title: "QR Generate",
                                     callback: () {
-                                        Get.to(() => const QrGenerateScreen());
+                                      Get.to(() => const QrGenerateScreen());
                                       //AdsService.showInterstitialAd(() {
-                                      
+
                                       //});
                                     },
                                   ),
@@ -155,9 +159,9 @@ class HomeScreen extends StatelessWidget {
                                     icon: FontAwesomeIcons.qrcode,
                                     title: "QR Scan",
                                     callback: () {
-                                       Get.to(() => const QrScannerScreen());
+                                      Get.to(() => const QrScannerScreen());
                                       // AdsService.showInterstitialAd(() {
-                                       
+
                                       // });
                                     },
                                   ),
@@ -169,7 +173,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  
                 ],
               ),
             ),
