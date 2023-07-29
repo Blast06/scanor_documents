@@ -30,6 +30,7 @@ class SplashController extends GetxController {
       if (admob.appOpenAd != null) {
         if (!firstRun) {
           admob.appOpenAd!.show();
+          Get.offAll(() => const ParentScreen());
         } else {
           // Get.offAndToNamed(Routes.FORM_SCREEN);
           Get.offAll(() => const ParentScreen());
