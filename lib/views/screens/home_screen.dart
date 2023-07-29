@@ -1,3 +1,4 @@
+import 'package:is_first_run/is_first_run.dart';
 import 'package:scanor/controllers/home_screen_controller.dart';
 
 import '../../services/External_services.dart';
@@ -22,6 +23,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    
     ExternalServices.getInstance().showRateApp();
 
     return Stack(
