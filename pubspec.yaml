@@ -47,6 +47,7 @@ dependencies:
   firebase_storage: ^11.1.0
   flutter:
     sdk: flutter
+  flutter_email_sender: ^6.0.1
   flutter_keyboard_visibility: ^5.3.0
   fluttertoast: ^8.0.9
   font_awesome_flutter: ^10.1.0
