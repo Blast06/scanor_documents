@@ -29,6 +29,7 @@ class SplashController extends GetxController {
     await Future.delayed(const Duration(seconds: 5), () {
       if (admob.appOpenAd != null) {
         admob.appOpenAd!.show();
+        Get.offAll(() => const ParentScreen());
       } else {
         // Handle the case when admob.appOpenAd is null
         // Get.offAndToNamed(Routes.FORM_SCREEN);
