@@ -40,12 +40,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace = "escaner.documentos.pdf"
-    testNamespace = "escaner.documentos.pdf"
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-
+    
+    namespace = "escaner.documentos.pdf"
+    testNamespace = "escaner.documentos.pdf"
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "escaner.documentos.pdf"
