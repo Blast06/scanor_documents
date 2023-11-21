@@ -40,7 +40,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
+    namespace = "escaner.documentos.pdf"
+    testNamespace = "escaner.documentos.pdf"
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }

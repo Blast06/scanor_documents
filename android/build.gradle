@@ -35,7 +35,6 @@ subprojects {
 // tasks.register("clean", Delete) {
 //     delete rootProject.buildDir
 // }
-
 repositories {
     mavenCentral()
 }
