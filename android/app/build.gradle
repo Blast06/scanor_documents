@@ -28,10 +28,6 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
-android {
-    if (getGradle().getGradleVersion().substring(0, 1).toInteger() >= 8) {
-        namespace "escaner.documentos.pdf"
-    }
     compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 

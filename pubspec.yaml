@@ -32,7 +32,7 @@ dependencies:
   circular_menu: ^2.0.1
   cloud_firestore: ^4.5.1
   cloud_functions: ^4.1.0
-  connectivity_plus: ^3.0.2
+  connectivity_plus: ^5.0.2
   cupertino_icons: ^1.0.2
   devicelocale: ^0.6.0
   draggable_scrollbar: ^0.1.0
