@@ -27,9 +27,25 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-    project.evaluationDependsOn(':app')
+// subprojects {
+//     project.buildDir = "${rootProject.buildDir}/${project.name}"
+//     project.evaluationDependsOn(':app')
+// }
+
+subprojects{
+    afterEvaluate {
+        if(it.hasProperty('android')){
+            android {
+                compileSdkVersion 34
+                buildToolsVersion "34.0.0"
+
+                defaultConfig {
+                    minSdkVersion 26
+                    targetSdkVersion 34
+                }
+            }
+        }
+    }
 }
 
 // tasks.register("clean", Delete) {
